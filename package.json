@@ -1,8 +1,11 @@
 {
-  "name": "@elastic/datemath",
+  "name": "@chatopera/datemath",
   "version": "4.0.2",
   "description": "elasticsearch datemath parser, used in kibana",
   "main": "lib/index.js",
+  "bin": {
+    "timestamp": "bin/timestamp.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -12,10 +15,10 @@
     "build": "babel src --out-dir lib",
     "prepublishOnly": "npm run test"
   },
-  "author": "Elastic",
+  "author": "Chatopera",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=10"
   },
   "prettier": {
     "printWidth": 100,
@@ -24,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elastic/datemath-js.git"
+    "url": "https://github.com/chatopera/datemath-js.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -40,6 +43,8 @@
     "sinon": "^4.1.4"
   },
   "dependencies": {
-    "moment": "^2.13.0"
+    "debug": "^4.1.1",
+    "moment": "^2.13.0",
+    "moment-timezone": "^0.5.31"
   }
 }
